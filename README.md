@@ -40,15 +40,7 @@ git clone https://github.com/<your-username>/gaucho_astrometry.git
 cd gaucho_astrometry
 ```
 
-### 2. Create a virtual environment (recommended)
-
-```bash
-python -m venv .venv
-source .venv/bin/activate   # macOS / Linux
-# .venv\Scripts\activate    # Windows
-```
-
-### 3. Install dependencies
+### 2. Install dependencies
 
 The script only requires standard scientific Python packages:
 
