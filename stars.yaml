@@ -1,0 +1,53 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Detection-limit parameters
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Signal-to-noise threshold for a positive detection (both RV and astrometry)
+snr_threshold: 3.0
+
+# Gaia DR4 single-epoch along-scan astrometric precision [micro-arcseconds]
+# Nominal value for bright stars (G ~ 10–12) at end of extended mission (~10.5 yr)
+# Reference: Gaia Collaboration (2016); de Bruijne (2012)
+gaia_dr4_epoch_precision_muas: 7.0
+
+# Number of Gaia along-scan transits (epochs) per star over the DR4 baseline
+# Typical value for DR4 (10.5 yr, ~40 transits/yr for well-sampled stars)
+gaia_dr4_n_transits: 420
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Plot axis ranges
+# ─────────────────────────────────────────────────────────────────────────────
+
+period_range_yr:  [0.005, 30.0]   # [min, max] in years
+mass_range_mjup:  [1.0e-4, 30.0] # [min, max] in Jupiter masses
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Output
+# ─────────────────────────────────────────────────────────────────────────────
+
+output_file: detection_limits.pdf
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Stars
+# Each entry:
+#   name           – display label
+#   distance_pc    – distance in parsecs
+#   mass_msun      – stellar mass in solar masses
+#   rv_accuracy_ms – ground-based RV single-measurement precision [m/s]
+# ─────────────────────────────────────────────────────────────────────────────
+
+stars:
+  - name: "GL406"
+    distance_pc:    2.4
+    mass_msun:      0.10
+    rv_accuracy_ms: 2.0
+
+  - name: "Barnard's Star"
+    distance_pc:    1.83
+    mass_msun:      0.16
+    rv_accuracy_ms: 1.5
+
+  - name: "Trappist-1"
+    distance_pc:    12.1
+    mass_msun:      0.089
+    rv_accuracy_ms: 5.0
